@@ -1,0 +1,15 @@
+@import 'common';
+
+.sponsors {
+  min-height: 800px;
+  padding: 50px 0 $footer-padding;
+  background-color: #f0f0f0;
+  .sponsors-head {
+    text-align: center;
+    font-size: 40px;
+    color: rgb(32, 32, 218);
+    text-shadow: #444;
+    text-transform: uppercase;
+
+  }
+}

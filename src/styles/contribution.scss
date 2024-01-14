@@ -1,0 +1,66 @@
+@import 'common';
+
+.contribution-details-wrapper  {
+  padding-bottom: $footer-padding - 25px;
+  min-height: 790px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .contribution-details {
+    height: 100%;
+    max-width: 60%;
+    margin: auto;
+  }
+  
+
+  @include cdMax(960) {
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    min-height: auto;
+    .contribution-details {
+      max-width: none;
+      width: 100%;
+      height: auto;
+    }
+    
+  }
+}
+
+.contribution-details-wrapper {
+  padding: 5px;
+  margin: 0 auto;
+  .contribution-title {
+    color: $theme-color;
+    text-align: center;
+    letter-spacing: 0.036em;
+    font-weight: 700;
+  }
+  .contribution-description {
+    padding: 0 10px;
+    line-height: 1.5em;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    color: #5b5f7c;
+  }
+  
+
+  @include cdMax(960) {
+    padding: 8px;
+    .contribution-title {
+      font-size: 25px;
+    }
+    .contribution-description {
+      padding: 0 00px;
+      text-align: start;
+      line-height: 1.25em;
+      font-size: 16px;
+    }
+    
+  }
+}
+
+
+

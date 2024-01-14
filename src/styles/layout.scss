@@ -1,0 +1,205 @@
+@import 'common';
+
+.layout {
+    min-height: 100vh;
+    position: relative;
+    .navbar {
+        z-index: 2;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.5s;
+        .ham {
+            color: #fff;
+            padding: 20px;
+            font-size: 26px;
+            display: none;
+            cursor: pointer;
+        }
+        .name-detail {
+            padding: 20px;
+            .logo {
+                font-size: 50px;
+                color: #fff;
+                transform: rotate(-45deg);
+                transition: color 0.2s, transform 1s;
+                cursor: pointer;
+
+                &:hover {
+                    transform: rotate(-285deg);
+                    color: $secondary-color;
+                }
+            }
+        }
+        .links {
+            margin: 0 20px;
+            .link {
+                margin: 10px;
+                padding: 12px 20px;
+                text-decoration: none;
+                color: #fff;
+                transition: background-color 0.2s, color 0.2s;
+            }
+            .link-active,
+            .link:hover {
+                background-color: $secondary-color;
+                border-radius: 2px;
+                color: $theme-color;
+            }
+        }
+    }
+
+    .navbar-2 {
+        background-color: $secondary-color;
+        position: sticky;
+        top: 0;
+        transition: all 0.5s;
+        box-shadow: $boxshadow;
+        .ham {
+            color: $theme-color;
+        }
+        .name-detail {
+            .logo {
+                color: $theme-color;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+        .links {
+            .link {
+                color: $theme-color;
+            }
+            .link-active,
+            .link:hover {
+                background-color: $theme-color;
+                border-radius: 2px;
+                color: $secondary-color;
+            }
+        }
+    }
+
+    @include cdMax(960) {
+        .navbar {
+            height: 64px;
+            .ham {
+                display: block;
+            }
+            .name-detail {
+                padding: 0;
+                margin: auto 12px;
+                .logo {
+                    font-size: 42px;
+                }
+            }
+        }
+        .links {
+            display: none;
+        }
+    }
+
+    @include cdMax(600) {
+    }
+}
+
+// side nav links start
+.side-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: Roboto;
+    font-weight: 500;
+    margin: 50px 0;
+    width: 250px;
+    height: 250px;
+    .side-link {
+        font-size: 18px;
+        font-weight: 400;
+        text-decoration: none;
+        // color: $secondary-color;
+        color: $theme-color;
+        margin: 10px;
+        width: 100%;
+        padding: 12px;
+        text-align: center;
+        transition: background-color 0.2s, color 0.2s;
+        &:hover {
+            color: $theme-color;
+            background-color: $secondary-color;
+        }
+    }
+    .side-link-active {
+        background-color: $secondary-color;
+        color: $theme-color;
+    }
+}
+
+// sidenav links end here
+
+// footer starts here
+.footer-wrapper {
+    width: 100%;
+    background-color: $theme-color;
+    user-select: none;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .footer-content {
+        height: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .copy {
+            opacity: 0.85;
+            font-size: 14px;
+            color: $secondary-color;
+            font-weight: 300;
+            margin: 5px;
+            text-align: center;
+        }
+    }
+    @include cdMax(600) {
+        .footer-content {
+            flex-direction: column;
+        }
+    }
+}
+// footer ends here
+
+// scroll-to-top starts
+.scroll-top-wrapper {
+    background-color: $theme-color;
+    border-radius: '2px';
+    position: sticky;
+    bottom: 14px;
+    width: fit-content;
+    float: right;
+    transition: all 0.5s ease-in-out;
+    border-radius: 5px;
+    margin-right: 10px;
+    z-index: 1;
+    .scroll-icon {
+        font-size: 34px;
+        color: $secondary-color;
+    }
+}
+// scroll-to-top ends
+
+.onload-modal {
+    .video-embed {
+        width: 560px;
+        height: 315px;
+    }
+    @include cdMax(600) {
+        .video-embed {
+            // width: 300px;
+            // height: 170px;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

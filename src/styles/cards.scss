@@ -1,0 +1,80 @@
+@import 'common';
+
+.achievement-card {
+  margin: 40px 0;
+  width: 100%;
+  max-height: 400px;
+  background-color: #98baff36;
+  display: flex;
+  justify-content: space-between;
+  // box-shadow: 0 0px 2px 0 rgba(0, 106, 194, 0.2);
+  // border: 1px solid #ffd1bf;
+  transition: box-shadow 0.5s;
+  text-align: center;
+  border: 2px solid $home-bg-color;
+  border-radius: 10px;
+  .a-details {
+    color: $theme-color;
+    padding: 15px;
+    margin: 0 auto;
+    .a-title {
+      font-size: 18px;
+      margin: 0;
+      padding: 14px 0 7px;
+      font-weight: 500;
+    }
+    .a-year {
+      font-size: 18px;
+      font-weight: 500;
+      color: #555;
+      margin: 0;
+      padding: 7px 0 14px;
+    }
+    .a-role {
+      font-size: 16px;
+      margin: 0;
+      padding: 12px 0;
+      .a-roletype {
+        font-weight: 500;
+        margin: 0;
+      }
+      .a-name {
+        color: #555;
+        margin: 0;
+        font-size: 15px;
+      }
+    }
+  }
+
+  .image-wrapper {
+    max-width: 60%;
+    .card-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0px 16px 0 rgba(0, 106, 194, 0.2);
+  }
+
+  @include cdMax(600) {
+    flex-direction: column;
+    max-height: none;
+    width: 100%;
+    .a-details {
+      order: 1;
+      .a-role {
+        padding: 6px 0;
+      }
+    }
+    .image-wrapper {
+      order: 0;
+      max-width: 100%;
+      .card-image {
+        height: 220px;
+      }
+    }
+  }
+}
